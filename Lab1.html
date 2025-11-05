@@ -1,56 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Labubu Land</title>
+    <title>SKULLPANDA</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Notable&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Yarndings+20&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/pngimg.com - labubu_PNG42.png" sizes="32x32" type="image/png">
-
+    <link rel="icon" href="https://global-static.popmart.com/globalAdmin/1743503572398____the-frame____.png?x-oss-process=image/format,webp" sizes="32x32" type="image/png">
     <style>
       body {
         margin: 0;
-        min-height: 100vh;
         display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        padding-top: 25px;
-        background:
-          radial-gradient(1200px 600px at 30% -10%, rgba(244, 135, 248, 0.25), transparent 60%),
-          radial-gradient(900px 400px at 70% 110%, rgba(255, 74, 210, 0.18), transparent 60%),
-          linear-gradient(180deg, #f0d7a2 0%, #f0e4ca 100%);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;  
+        min-height: 100vh;
+        background: linear-gradient(#000000 0%, #2e1f30 100%);
       }
 
       .box {
-        background-color: #fff3d848;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(41, 36, 41);
         border-radius: 15px;
         box-shadow: 0 6px 20px rgba(255, 255, 255, 0.45),
-                    inset 0 -3px 8px rgba(0,0,0,0.06);
+                    inset 0 -3px 8px rgba(255, 255, 255, 0.06);
         text-align: center;
-        color: #494949;
+        color: #cfcece;
         font-weight: 100;
         letter-spacing: 1px;
         padding: 20px 30px;
+        padding-top: 0;
         font-family: "Notable", sans-serif;
-        width: fit-content;
-        max-width: 700px;
+        width: 75%;
       }
 
       h1 {
+        font-family: "Notable";
+        margin: 10px 0 25px 0;
         margin-top: 0;
-        margin-bottom: 15px;
+        color: #2e2d2d;
+        text-align: center;
+        background: linear-gradient(135deg, #ffaedd, #fca1da);
+        width: 100%;
+      }
+
+      h1 img {
+        width: 75px;
+        vertical-align: middle;
+        margin-right: 20px;
+        align-self: left;
       }
 
       .product-wrap {
-        width: 50%;
+        flex: 1;
+        width: 95%;
         aspect-ratio: 1 / 1;
         margin: 0 auto 15px;
-        padding: 10px;
+        padding: 0px;
         border-radius: 10px;
         background:
-          radial-gradient(120px 120px at 30% 30%, rgba(250, 230, 175, 0.22), transparent 60%),
-          linear-gradient(135deg, rgba(253, 253, 228, 0.6), rgba(255, 255, 255, 0.815));
-        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.45), inset 0 -3px 8px rgba(0,0,0,0.06);
+          radial-gradient(120px 120px at 30% 30%, rgba(255, 184, 251, 0.22), transparent 60%),
+          linear-gradient(135deg, rgba(252, 205, 253, 0.6), rgba(255, 255, 255, 0.815));
+        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.45), inset 0 -3prgba(255, 255, 255, 0.06);
       }
 
       .product {
@@ -61,16 +73,28 @@
         border-radius: 10px;
         object-fit: cover;
         object-position: 50% 40%;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        cursor: pointer;
       }
-
+      .product:hover {
+        transform: scale(1.05) rotate(-2deg);
+        box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+      }
+      .content {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+      }
       .desc {
-        text-align: center;
         font-family: "Nunito", sans-serif;
         font-weight: 200;
-        font-size: 18px;
-        color: #606060;
+        font-size: 20px;
+        color: #c4c4c4;
         margin: 0 auto;
         line-height: 1.5;
+        padding-top: 10px;  
       }
 
       .icons {
@@ -83,35 +107,130 @@
       .icons img {
         position: fixed;
         display: block;
-        opacity: .75;
+        opacity: .25;
         filter: drop-shadow(0 6px 18px rgba(255, 255, 255, 0.5));
         width: 7.5%;
       }
 
-      .icon1 { top: 10%; left: 4%; transform: rotate(-6deg); }
-      .icon2 { top: 15%; right: 3%; transform: rotate(4deg); }
-      .icon3 { bottom: 20%; left: 4.5%; transform: rotate(-3deg); }
-      .icon4 { bottom: 25%; right: 3.5%; transform: rotate(5deg); }
+      .icon1 { top: 11%; left: 1.5%; transform: rotate(-6deg); }
+      .icon2 { top: 24%; right: 2%; transform: rotate(4deg); }
+      .icon3 { bottom: 32%; left: 2%; transform: rotate(-3deg); }
+      .icon4 { bottom: 22%; right: 1.4%; transform: rotate(5deg); }
+      .icon5 {
+        position:fixed; 
+        bottom: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15%;
+        opacity: 0.25;
+        filter: drop-shadow(0 6 x 18px rgba(255, 255, 255, 0.5));
+      }
+      .features {
+        padding-left: 0;
+        margin-left: 0;
+        border-collapse: collapse;
+        font-size: 20px;
+        text-align: left;
+        font-family: "Nunito";
+      }
+      .price{
+        margin-top: 15px;
+        font-family: "Google-Sans", sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        color:#ff98da;
+      }
+      .buy{
+        width: 50%;
+        align-self: center;
+        margin-top: 15px;
+        text-align: center;
+        background: linear-gradient(135deg, #ff6ac1, #ff98da);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 12px 28px;
+        font-family: "Notable", sans-serif;
+        font-size: 48px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(255, 160, 220, 0.4);
+      }
+      .buy:hover {
+        transform: scale(1.08);
+        background: linear-gradient(135deg, #ff98da, #ffc7f2);
+        box-shadow: 0 8px 20px rgba(255, 160, 220, 0.6);
+      }
+      .reviews{
+        font-family: "Nunito", sans-serif;
+        font-weight: 200;
+        font-size: 18px;  
+        text-align: left;
+      }
+      .contact{
+        color: #c4c4c4; 
+        font-family: 'Nunito', sans-serif; 
+        margin: 25px auto 25px 25px;
+        text-align: left; 
+        align-self: flex-start;
+        padding-left: 5px;
+      }
+      .desc, .features, .reviews {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 8px;
+      }
+
     </style>
   </head>
-
   <body>
+     <h1> <img src="img/pan-flute____.jpg" alt=""> SKULLPANDA NOW %50 OFF FOR THE FIRST 1000 BUYERS! </h1>
     <div class="icons" aria-hidden="true">
-      <img class="icon1" src="img/brown2.png" alt="">
-      <img class="icon2" src="img/blue2.png" alt="">
-      <img class="icon3" src="img/blue1.png" alt="">
-      <img class="icon4" src="img/brown1.png" alt="">
+      <img class="icon1" src="img/butterfly-dream-secret____.jpg" alt="">
+      <img class="icon2" src="img/carousel-lantern____.jpg" alt="">
+      <img class="icon3" src="img/ghanta____.jpg" alt="">
+      <img class="icon4" src="img/hill-censer____.jpg" alt="">
     </div>
-
-    <div class="box">
-      <h1>The Labubu</h1>
+      <img class="icon5" src="img/skeleton-fantasy-show____.jpg" alt="">
+      <div class="box">
       <div class="product-wrap">
-        <img class="product" src="img/5_z2ic4kJ0He_1200x1200.jpg" alt="">
+        <img class="product" src="img/The-Mirage-Series_10.jpg" alt="">
       </div>
-
+      <div class="content">
       <div class="desc">
-        The Labubu is a popular collectible plush toy, first created in 2015 by artist Kasing Lung as part of his "The Monsters" series. The character is a mischievous, elf-like monster with large ears, big eyes, and a wide, grinning mouth with sharp teeth.
+      <p style="text-align: center; font-weight: 800;"> The Description </p>
+        SKULLPANDA journeys through different worlds, taking on various personas and living out myriad lives. On this grand adventure, it's on a quest to find its truest self and break new ground all while contemplating the shape of infinity.
       </div>
-    </div>
+      <div class="features">
+        <ul>
+          <p style="text-align: center; font-weight: 400;"><strong>The Features</strong></p>
+          <li><strong>Material</strong>: Durable synthetic plastic</li>
+          <li><strong>Size</strong>: Approximately 3-4 inches tall</li>
+          <li><strong>Variants</strong>: Available in various variants, each with their own story </li>
+          <li><strong>Design</strong>: Skull head + a panda body</li>
+          <li><strong>Packaging</strong>: Comes in a blind box with a certificate of authenticity</li>
+        </ul>
+      </div>
+      <div class="reviews">
+        <h3 style="text-align: center;">The Customer Reviews</h3>
+        <p>"I absolutely love Skullpanda! The design is so unique — it’s cute but mysterious at the same time. I got the ‘Ancient Castle’ version, and it looks even better in person than in photos." - <img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""></p>
+        <p>"Skullpanda isn’t just a toy — it’s a piece of art. The sculpting and colors tell a quiet story about emotion and identity. It feels like each figure has its own mood. It’s hauntingly beautiful." - <img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""></p>
+        <p>"As a long-time collector, Skullpanda has one of the most consistent quality lines. The paint job is clean, the character design is full of personality, and the variety across series keeps it exciting. My only wish is that the rare chase figures weren’t so hard to find!" - <img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""></p>
+      </div>
+      <div class="price">
+        Price: $5.00 (Original Price: $10.00)
+      </div>
+      <div class="buy">
+       BUY NOW
+      </div>
+      </div>
+      </div>
+      <p class="contact"> 
+      Contact us at: 
+      <br>Email: SkullpandaFakeEmail@gmail.com
+      <br>Phone: +1 (555) 123-4567
+      <br>Address: 123 Panda Lane, Toy City, TX 75001
+      <br>Instagram: @SkullpandaToys
+      </p>
   </body>
 </html>
