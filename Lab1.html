@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Labubu Land</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Notable&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Yarndings+20&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/pngimg.com - labubu_PNG42.png" sizes="32x32" type="image/png">
+
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 25px;
+        background:
+          radial-gradient(1200px 600px at 30% -10%, rgba(244, 135, 248, 0.25), transparent 60%),
+          radial-gradient(900px 400px at 70% 110%, rgba(255, 74, 210, 0.18), transparent 60%),
+          linear-gradient(180deg, #f0d7a2 0%, #f0e4ca 100%);
+      }
+
+      .box {
+        background-color: #fff3d848;
+        border-radius: 15px;
+        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.45),
+                    inset 0 -3px 8px rgba(0,0,0,0.06);
+        text-align: center;
+        color: #494949;
+        font-weight: 100;
+        letter-spacing: 1px;
+        padding: 20px 30px;
+        font-family: "Notable", sans-serif;
+        width: fit-content;
+        max-width: 700px;
+      }
+
+      h1 {
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+
+      .product-wrap {
+        width: 50%;
+        aspect-ratio: 1 / 1;
+        margin: 0 auto 15px;
+        padding: 10px;
+        border-radius: 10px;
+        background:
+          radial-gradient(120px 120px at 30% 30%, rgba(250, 230, 175, 0.22), transparent 60%),
+          linear-gradient(135deg, rgba(253, 253, 228, 0.6), rgba(255, 255, 255, 0.815));
+        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.45), inset 0 -3px 8px rgba(0,0,0,0.06);
+      }
+
+      .product {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 10px;
+        object-fit: cover;
+        object-position: 50% 40%;
+      }
+
+      .desc {
+        text-align: center;
+        font-family: "Nunito", sans-serif;
+        font-weight: 200;
+        font-size: 18px;
+        color: #606060;
+        margin: 0 auto;
+        line-height: 1.5;
+      }
+
+      .icons {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 10;
+      }
+
+      .icons img {
+        position: fixed;
+        display: block;
+        opacity: .75;
+        filter: drop-shadow(0 6px 18px rgba(255, 255, 255, 0.5));
+        width: 7.5%;
+      }
+
+      .icon1 { top: 10%; left: 4%; transform: rotate(-6deg); }
+      .icon2 { top: 15%; right: 3%; transform: rotate(4deg); }
+      .icon3 { bottom: 20%; left: 4.5%; transform: rotate(-3deg); }
+      .icon4 { bottom: 25%; right: 3.5%; transform: rotate(5deg); }
+    </style>
+  </head>
+
+  <body>
+    <div class="icons" aria-hidden="true">
+      <img class="icon1" src="img/brown2.png" alt="">
+      <img class="icon2" src="img/blue2.png" alt="">
+      <img class="icon3" src="img/blue1.png" alt="">
+      <img class="icon4" src="img/brown1.png" alt="">
+    </div>
+
+    <div class="box">
+      <h1>The Labubu</h1>
+      <div class="product-wrap">
+        <img class="product" src="img/5_z2ic4kJ0He_1200x1200.jpg" alt="">
+      </div>
+
+      <div class="desc">
+        The Labubu is a popular collectible plush toy, first created in 2015 by artist Kasing Lung as part of his "The Monsters" series. The character is a mischievous, elf-like monster with large ears, big eyes, and a wide, grinning mouth with sharp teeth.
+      </div>
+    </div>
+  </body>
+</html>
