@@ -31,40 +31,74 @@
         letter-spacing: 1px;
         padding: 20px 30px;
         padding-top: 0;
+        margin-top: 15px;
         font-family: "Notable", sans-serif;
         width: 75%;
       }
 
       h1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         font-family: "Notable";
-        margin: 10px 0 25px 0;
-        margin-top: 0;
-        color: #2e2d2d;
+        margin: 0;
+        padding: 15px 30px;
+        color: #ffffff;
         text-align: center;
-        background: linear-gradient(135deg, #ffaedd, #fca1da);
+        background: linear-gradient(135deg, #593966 ,#6b3368);
         width: 100%;
+        box-sizing: border-box;
       }
 
-      h1 img {
+      .logo, .catch{
+        filter: drop-shadow(0 6px 18px rgba(255, 255, 255, 0.5));
+      }
+     
+      @font-face {
+        font-family: "HennyPenny";
+        src: url("fonts/HennyPenny-Regular.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "GoogleSans";
+        src: url("fonts/GoogleSansCode-VariableFont_wght.ttf") format("truetype");
+      }
+      .logo{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        justify-content: left;
+        font-family: "HennyPenny";
+        font-size: 36px;
+      }
+      .logo img{
         width: 75px;
-        vertical-align: middle;
-        margin-right: 20px;
-        align-self: left;
+        height: auto;
+        margin-right: 10px;
+        border-radius: 10px;
       }
-
+      .catch{
+        flex: 1;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        font-family: "Notable", sans-serif;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+      }
       .product-wrap {
         flex: 1;
         width: 95%;
         aspect-ratio: 1 / 1;
-        margin: 0 auto 15px;
-        padding: 0px;
+        margin: 25px auto 15px;
+        padding: 2px;
         border-radius: 10px;
         background:
           radial-gradient(120px 120px at 30% 30%, rgba(255, 184, 251, 0.22), transparent 60%),
-          linear-gradient(135deg, rgba(252, 205, 253, 0.6), rgba(255, 255, 255, 0.815));
+          linear-gradient(135deg, rgba(88, 55, 88, 0.6), rgba(102, 46, 102, 0.815));
         box-shadow: 0 6px 20px rgba(255, 255, 255, 0.45), inset 0 -3prgba(255, 255, 255, 0.06);
+        filter: drop-shadow(0 6px 18px rgba(255, 255, 255, 0.15));
       }
-
       .product {
         display: block;
         width: 100%;
@@ -78,7 +112,7 @@
       }
       .product:hover {
         transform: scale(1.05) rotate(-2deg);
-        box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+        box-shadow: 0 10px 25px rgba(212, 0, 255, 0.15);
       }
       .content {
         flex: 2;
@@ -113,18 +147,11 @@
       }
 
       .icon1 { top: 11%; left: 1.5%; transform: rotate(-6deg); }
-      .icon2 { top: 24%; right: 2%; transform: rotate(4deg); }
-      .icon3 { bottom: 32%; left: 2%; transform: rotate(-3deg); }
-      .icon4 { bottom: 22%; right: 1.4%; transform: rotate(5deg); }
-      .icon5 {
-        position:fixed; 
-        bottom: 0%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 15%;
-        opacity: 0.25;
-        filter: drop-shadow(0 6 x 18px rgba(255, 255, 255, 0.5));
-      }
+      .icon2 { top: 22%; right: 2%; transform: rotate(4deg); }
+      .icon3 { top: 38%; left: 2%; transform: rotate(-3deg); }
+      .icon4 { bottom: 33%; right: 1.4%; transform: rotate(5deg); }
+      .icon5 { bottom: 17%; left: 1.9%; transform: rotate(7deg); }
+      .icon6 { bottom: 4.5%; right: 2.5%; transform: rotate(-5deg);}
       .features {
         padding-left: 0;
         margin-left: 0;
@@ -135,17 +162,17 @@
       }
       .price{
         margin-top: 15px;
-        font-family: "Google-Sans", sans-serif;
+        font-family: "GoogleSans", sans-serif;
         font-size: 24px;
         font-weight: bold;
-        color:#ff98da;
+        color:#87468a;
       }
       .buy{
         width: 50%;
         align-self: center;
         margin-top: 15px;
         text-align: center;
-        background: linear-gradient(135deg, #ff6ac1, #ff98da);
+        background: linear-gradient(135deg, #85366d, #703f83);
         color: white;
         border: none;
         border-radius: 10px;
@@ -171,10 +198,9 @@
       .contact{
         color: #c4c4c4; 
         font-family: 'Nunito', sans-serif; 
-        margin: 25px auto 25px 25px;
-        text-align: left; 
-        align-self: flex-start;
+        text-align: center; 
         padding-left: 5px;
+        padding-top: 20px;
       }
       .desc, .features, .reviews {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -184,17 +210,21 @@
     </style>
   </head>
   <body>
-     <h1> <img src="img/pan-flute____.jpg" alt=""> SKULLPANDA NOW %50 OFF FOR THE FIRST 1000 BUYERS! </h1>
+     <h1> 
+      <div class="logo"> <img src="img/pan-flute____.jpg" alt=""> SKULLPANDA </div> 
+      <div class="catch">NOW %50 OFF FOR THE FIRST 1000 BUYERS! </div>
+    </h1>
     <div class="icons" aria-hidden="true">
       <img class="icon1" src="img/butterfly-dream-secret____.jpg" alt="">
       <img class="icon2" src="img/carousel-lantern____.jpg" alt="">
       <img class="icon3" src="img/ghanta____.jpg" alt="">
       <img class="icon4" src="img/hill-censer____.jpg" alt="">
-    </div>
       <img class="icon5" src="img/skeleton-fantasy-show____.jpg" alt="">
+      <img class="icon6" src="img/puppetry____.jpg" alt="">
+    </div>
       <div class="box">
       <div class="product-wrap">
-        <img class="product" src="img/The-Mirage-Series_10.jpg" alt="">
+        <img class="product" src="img/image3.jpg" alt="">
       </div>
       <div class="content">
       <div class="desc">
@@ -204,8 +234,8 @@
       <div class="features">
         <ul>
           <p style="text-align: center; font-weight: 400;"><strong>The Features</strong></p>
-          <li><strong>Material</strong>: Durable synthetic plastic</li>
-          <li><strong>Size</strong>: Approximately 3-4 inches tall</li>
+          <li><strong>Material</strong>: Durable synthetic plastic,  PVC/ABS/Electronic Component</li>
+          <li><strong>Size</strong>: Height about 11.4 cm</li>
           <li><strong>Variants</strong>: Available in various variants, each with their own story </li>
           <li><strong>Design</strong>: Skull head + a panda body</li>
           <li><strong>Packaging</strong>: Comes in a blind box with a certificate of authenticity</li>
@@ -225,12 +255,12 @@
       </div>
       </div>
       </div>
-      <p class="contact"> 
+      <div class="contact"> 
       Contact us at: 
       <br>Email: SkullpandaFakeEmail@gmail.com
       <br>Phone: +1 (555) 123-4567
       <br>Address: 123 Panda Lane, Toy City, TX 75001
       <br>Instagram: @SkullpandaToys
-      </p>
+      </div>
   </body>
 </html>
