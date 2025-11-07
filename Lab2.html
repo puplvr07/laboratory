@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bonchon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend,wght@0,200..1000;1,200..1000&family=Yarndings+20&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.jpg" sizes="32x32" type="image/png">
+    <style>
+        @font-face{
+        font-family: "Lexend";
+        src: url("fonts/Lexend-VariableFont_wght.ttf") format("truetype");
+        }
+        @font-face{
+        font-family: "Nunito";
+        src: url("fonts/Nunito-Medium.ttf") format("truetype");
+        }
+        @font-face{
+        font-family: "TitanOne";
+        src: url("fonts/TitanOne-Regular.ttf") format("truetype");
+        }
+        @font-face{
+        font-family: "Kaushan";
+        src: url("fonts/KaushanScript-Regular.ttf") format("truetype");
+        }
+        @font-face{
+        font-family: "Knewave";
+        src: url("fonts/Knewave-Regular.ttf") format("truetype");
+        }
+        body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;  
+        min-height: 100vh;
+        background: linear-gradient(#ffffff 0%, #ffffff 100%);
+        padding-bottom: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        margin-top: 0;
+        }
+        h1{
+            background: radial-gradient(#e21c1c, #742727);
+            display: flex;
+            width: 100%;
+            font-family: "Lexend";
+            margin: 0;
+            padding: 0 0 0 0;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0;
+            padding: 15px 30px;
+            color: #ffffff;
+            text-align: center;
+            box-sizing: border-box;
+            
+        }
+        h1 text{
+            margin-left:5px;
+            font-family:'Nunito';
+            text-align: left;
+            align-items: left;
+            align-self: left;
+            justify-content: left;
+        }
+        .logos{
+            text-align: left;
+            align-items: left;
+            align-self: left;
+            justify-content: left;
+            margin-bottom: 10px;
+        }
+        .logo{
+            width: 50px;
+            height: auto;
+            margin-left: 10px;
+            margin-right: 15px;
+            margin-bottom: -10px;
+        }
+        .navigation{
+            text-align: right;
+            align-items: right;
+            align-self: right;
+            justify-content: space-between;
+            font-size: 18px;
+            gap: 15px;
+            word-spacing: 15px;
+            margin-left: 15px;
+        }
+        h2{
+            justify-content: center;
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center;
+            justify-content: center;
+            font-size: 120px;
+            font-weight: 800;
+            font-family: "Lexend", "Nunito";
+            background-image: url("img/hero.jpg");
+            background-size: cover;      
+            background-position: center; 
+            background-repeat: no-repeat;
+            background-attachment: scroll; 
+            width: 100%;
+            height: 45vh;
+            max-height: 25%;
+            opacity: 0.6;
+            color:#ffffff;
+        }
+        h2 img{
+            opacity: 0.75;
+            margin-top: 0;
+            align-items: center;
+            justify-content: center; 
+            align-self: center;
+            width: 100%;
+            height: 100%;
+            height: auto;
+        }
+        h2::before {
+            content: "";
+            margin-top: 8.6vh;
+            height: 46.4%;
+            position: absolute;
+            inset: 0;
+            background: rgba(77, 60, 60, 0.4); 
+            z-index: 1;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            }
+
+        h2 .hero {
+            font-family: "TitanOne";
+            position: relative;
+            z-index: 2;
+            margin-top: 140px;
+            letter-spacing: 5px;
+            font-weight: 200;
+            filter: drop-shadow(0 6px 18px #000000);
+        }
+        h3
+        {
+            background: linear-gradient(135deg, #922c2c, #bd2424);
+            border: #c01b1b 15px solid;
+            margin-top: 0;
+            margin-bottom: 10px;
+            width: 100%;
+            color: #ffffff;
+        }
+        .menu{
+            font-family: "Nunito";
+            color:#742727;
+            font-size: 18px;
+            margin-top: 40px;
+        }
+        .icons{
+            filter: drop-shadow(0 6px 18px rgba(54, 53, 53, 0.5));
+            opacity: 0.8;
+            display: block;
+            z-index: 5;
+        }
+        .icons img{
+            width: 7.5%;
+            height: auto;
+            position: fixed;
+            z-index: 6;
+        }
+        .icon1 { bottom: 20%; left: 10%; }
+        .icon2 { bottom: 50%; right: 10%; }
+        .icon3 { top: 30%; left: 40%; }
+        .icon4 { bottom: 64%; right: 25%; }
+    </style>
+    </head>
+    <body>
+        <h1><div class="logos" style="font-family: 'Knewave'; letter-spacing: 2px;"><img class="logo" src="img/chicken.png" alt=""> Bonchon</div> <div class="navigation"> Home Menu About Contact</div></h1>
+        <h2><div class="hero">
+            Change is Delicious.
+        </div></h2>
+        <h3> </h3>
+        <div class="menu">
+            <strong style="font-size: 30px; font-family: 'Kaushan';">The Menu</strong>
+        </div>
+        <div class="icons">
+            <img class="icon1" src="img/exclamation.png" alt="">
+            <img class="icon2" src="img/thunder.png" alt="">
+            <img class="icon3" src="img/mark.png" alt="">
+            <img class="icon4" src="img/sparkle.png" alt="">
+        </div>
+    </body>
+</html>
