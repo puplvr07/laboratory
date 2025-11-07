@@ -43,6 +43,7 @@
             margin-bottom: 0;
             padding-top: 0;
             margin-top: 0;
+            z-index: 0;
         }
         h1{
             background: radial-gradient(#e21c1c, #742727);
@@ -206,22 +207,34 @@
             background: radial-gradient(#bd2424,#be2d2d);
             filter: drop-shadow(0 6px 18px rgba(255, 0, 0, 0.144));
         }
-        .icons{
-            filter: drop-shadow(0 6px 18px rgba(54, 53, 53, 0.5));
-            inset: 0;
-            opacity: 1;
-            z-index: 10;
+        .map{
+            display: flex;
+            flex-direction: row;
+            border: 1px solid #00000010;
+            border-radius: 10px;
+            background: #ffffff;
+            filter: drop-shadow(0 2px 2px #00000057);
+            padding: 25px;
+            text-align: justify;
+            font-family: "Nunito";
+            font-size: 16px;
+            max-width: 50%;
+            justify-content: center;
+            margin: 40px;
+            gap: 20px;
+            vertical-align: middle;
         }
-        .icons img{
+        .map img{
+            width: 400px;
+        }
+        footer{
+            text-align: left;
             width: 100%;
-            height: auto;
-            position: fixed;
-            display: block;
+            background: radial-gradient(#e21c1c, #742727);
+            color: #ffffff;
+            padding: 10px;
+            margin-left: 10px;
         }
-        .icon1 { top: 11%; left: 1.5%; transform: rotate(-6deg); }
-        .icon2 { top: 22%; right: 2%; transform: rotate(4deg); }
-        .icon3 { top: 38%; left: 2%; transform: rotate(-3deg); }
-        .icon4 { bottom: 33%; right: 1.4%; transform: rotate(5deg); }
     </style>
     </head>
     <body>
@@ -243,11 +256,16 @@
             <td> <img src="img/burger.jpg" alt=""> <br> Chikin Chops <br> 90 Pesos <br><button class="buy"> Add To Cart </button></td>
            </tr>
         </table>
-        <div class="icons">
-            <img class="icon1" src="img/exclamation.jpg" alt="">
-            <img class="icon2" src="img/thunder.jpg" alt="">
-            <img class="icon3" src="img/mark.jpg" alt="">
-            <img class="icon4" src="img/sparkle.jpg" alt="">
+        <div class="map">
+            <img src="img/map.jpg" alt="">
+            Bonchon is a globally recognized Korean fried chicken restaurant chain that has expanded far beyond its roots in Busan, South Korea. Since its founding in 2002, Bonchon has become known for its crispy double-fried chicken glazed in signature soy garlic or spicy sauces, as well as its fusion of Korean and Western flavors. 
+            <br>
+            <br>
+            Today, Bonchon operates in hundreds of locations across Asia, the United States, the Middle East, and Europe, making it one of the most internationally successful Korean food brands. Its worldwide presence showcases how Korean cuisine has become a global phenomenon, with Bonchon often serving as many people’s first introduction to Korean comfort food.
         </div>
+        <footer>
+            &copy; 2020-2025 Bonchon Philippines. <br>
+            All Rights Reserved.
+        </footer>
     </body>
 </html>
