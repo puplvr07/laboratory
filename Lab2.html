@@ -27,18 +27,22 @@
         font-family: "Knewave";
         src: url("fonts/Knewave-Regular.ttf") format("truetype");
         }
+        @font-face{
+        font-family: "Momo";
+        src: url("fonts/MomoTrustDisplay-Regular.ttf") format("truetype");
+        }
         body {
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;  
-        min-height: 100vh;
-        background: linear-gradient(#ffffff 0%, #ffffff 100%);
-        padding-bottom: 0;
-        margin-bottom: 0;
-        padding-top: 0;
-        margin-top: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;  
+            min-height: 100vh;
+            background: linear-gradient(#ffffff 0%, #ffffff 100%);
+            padding-bottom: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            margin-top: 0;
         }
         h1{
             background: radial-gradient(#e21c1c, #742727);
@@ -49,7 +53,6 @@
             padding: 0 0 0 0;
             align-items: center;
             justify-content: space-between;
-            margin: 0;
             padding: 15px 30px;
             color: #ffffff;
             text-align: center;
@@ -120,8 +123,8 @@
         }
         h2::before {
             content: "";
-            margin-top: 8.6vh;
-            height: 46.4%;
+            margin-top: 9.1vh;
+            height: 46.2%;
             position: absolute;
             inset: 0;
             background: rgba(77, 60, 60, 0.4); 
@@ -139,8 +142,7 @@
             font-weight: 200;
             filter: drop-shadow(0 6px 18px #000000);
         }
-        h3
-        {
+        h3 {
             background: linear-gradient(135deg, #922c2c, #bd2424);
             border: #c01b1b 15px solid;
             margin-top: 0;
@@ -148,28 +150,78 @@
             width: 100%;
             color: #ffffff;
         }
-        .menu{
+        .menu {
             font-family: "Nunito";
-            color:#742727;
+            color: #742727;
             font-size: 18px;
-            margin-top: 40px;
+            width: 75%;
+            border-collapse: separate;
+            border-spacing: 50px; 
+            z-index: 5;
+        }
+
+        .menu td {
+            background: #ffffff;
+            border-radius: 10px;
+            border: 1px solid #00000031;
+            width: 15%;
+            height: auto; 
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            filter: drop-shadow(0 2px 2px #00000057);
+            padding: 15px; 
+            max-width: 250px;
+        }
+
+        .menu img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            border: 1px solid #ffffff11;
+            margin-top: 0; 
+            margin-bottom: 2%;
+        }
+
+        .menu td:hover{
+            transform: scale(1.08);
+            box-shadow:rgba(182, 71, 71, 0.5);
+            filter: drop-shadow(0 6px 18px rgba(218, 138, 138, 0.5));
+        }
+        .buy{
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 200;
+            border-color:#e21c1c5e;
+            margin-top: 5px;
+            font-family: "Nunito";
+            color:#ffffff;
+            background: radial-gradient(#742727,#922c2c);
+            width: 50%;
+            height: 25%;
+        }
+        .buy:hover{
+            cursor: pointer;
+            transform: scale(1.06);
+            background: radial-gradient(#bd2424,#be2d2d);
+            filter: drop-shadow(0 6px 18px rgba(255, 0, 0, 0.144));
         }
         .icons{
             filter: drop-shadow(0 6px 18px rgba(54, 53, 53, 0.5));
-            opacity: 0.8;
-            display: block;
-            z-index: 5;
+            inset: 0;
+            opacity: 1;
+            z-index: 10;
         }
         .icons img{
-            width: 7.5%;
+            width: 100%;
             height: auto;
             position: fixed;
-            z-index: 6;
+            display: block;
         }
-        .icon1 { bottom: 20%; left: 10%; }
-        .icon2 { bottom: 50%; right: 10%; }
-        .icon3 { top: 30%; left: 40%; }
-        .icon4 { bottom: 64%; right: 25%; }
+        .icon1 { top: 11%; left: 1.5%; transform: rotate(-6deg); }
+        .icon2 { top: 22%; right: 2%; transform: rotate(4deg); }
+        .icon3 { top: 38%; left: 2%; transform: rotate(-3deg); }
+        .icon4 { bottom: 33%; right: 1.4%; transform: rotate(5deg); }
     </style>
     </head>
     <body>
@@ -178,14 +230,24 @@
             Change is Delicious.
         </div></h2>
         <h3> </h3>
-        <div class="menu">
-            <strong style="font-size: 30px; font-family: 'Kaushan';">The Menu</strong>
-        </div>
+        <strong style="font-size: 30px; font-family: 'Momo'; text-align: center; margin-top: 15px; margin-bottom: 10px; color: maroon;">The Menu</strong>
+        <table class="menu">
+           <tr>
+            <td> <img src="img/bulgogi.jpg" alt=""> <br> Bulgogi <br>100 Pesos <br><button class="buy"> Add To Cart </button></td>
+            <td> <img src="img/bibimbowl.jpg" alt=""> <br> Bibimbowl<br>95 Pesos <br><button class="buy"> Add To Cart </button></td>
+            <td> <img src="img/2pc.jpg" alt=""> <br> 2pc Chicken <br>95 Pesos <br><button class="buy"> Add To Cart </button></td>
+           </tr>
+           <tr>
+            <td> <img src="img/seafood.jpg" alt=""> <br> Seafood Mix <br> 95 Pesos <br><button class="buy"> Add To Cart </button></td>
+            <td> <img src="img/rosebokki.jpg" alt=""> <br> Rosebokki <br> 100 Pesos <br><button class="buy"> Add To Cart </button></td>
+            <td> <img src="img/burger.jpg" alt=""> <br> Chikin Chops <br> 90 Pesos <br><button class="buy"> Add To Cart </button></td>
+           </tr>
+        </table>
         <div class="icons">
-            <img class="icon1" src="img/exclamation.png" alt="">
-            <img class="icon2" src="img/thunder.png" alt="">
-            <img class="icon3" src="img/mark.png" alt="">
-            <img class="icon4" src="img/sparkle.png" alt="">
+            <img class="icon1" src="img/exclamation.jpg" alt="">
+            <img class="icon2" src="img/thunder.jpg" alt="">
+            <img class="icon3" src="img/mark.jpg" alt="">
+            <img class="icon4" src="img/sparkle.jpg" alt="">
         </div>
     </body>
 </html>
